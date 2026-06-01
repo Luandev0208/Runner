@@ -8,4 +8,3 @@ func _on_jogar_pressed() -> void:
 func _on_sair_pressed() -> void:
 	get_tree().quit()
 	pass 
-CameraAttributes
