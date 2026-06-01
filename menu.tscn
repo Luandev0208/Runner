@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bkb16gm4f73x5"]
+
+[ext_resource type="Texture2D" uid="uid://buww5bao1gv1b" path="res://Recursos/background.png" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://dgimt6jufu4rr" path="res://menu.gd" id="1_mae5d"]
+[ext_resource type="FontFile" uid="uid://dq15cvwh0e7yc" path="res://Recursos/PressStart2P-Regular.ttf" id="3_4hy44"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ouk20"]
+texture = ExtResource("1_lti8b")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytr4m"]
+bg_color = Color(5.9441477e-06, 0.613276, 0.1411508, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(1.0588765e-06, 0.41648036, 0.08371983, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
+bg_color = Color(0, 0.3254902, 0.0627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l48gv"]
+bg_color = Color(0.68129915, 0.16665488, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecwwl"]
+bg_color = Color(0.4940725, 0.10860524, 9.62615e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk3ma"]
+bg_color = Color(0.45723093, 0.09762748, 1.4439226e-07, 1)
+
+[node name="Menu" type="Control" unique_id=1207646939]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mae5d")
+
+[node name="Fundo" type="Panel" parent="." unique_id=1699732415]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ouk20")
+
+[node name="Título" type="Label" parent="." unique_id=1562610277]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -207.0
+offset_right = 408.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("3_4hy44")
+theme_override_font_sizes/font_size = 136
+text = "Runner"
+
+[node name="Botões" type="VBoxContainer" parent="." unique_id=2070900172]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 25.0
+offset_right = 150.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 54
+
+[node name="Jogar" type="Button" parent="Botões" unique_id=1284727782]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4hy44")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_ytr4m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hy44")
+text = "Jogar"
+
+[node name="Sair" type="Button" parent="Botões" unique_id=1128730885]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4hy44")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_l48gv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ecwwl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kk3ma")
+text = "Sair"
+
+[connection signal="pressed" from="Botões/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Botões/Sair" to="." method="_on_sair_pressed"]
