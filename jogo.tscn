@@ -80,45 +80,53 @@ animations = [{
 script = ExtResource("1_yq54j")
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=880474235]
+texture_filter = 1
 scale = Vector2(3.5999994, 3.6)
 texture = ExtResource("2_1ap6j")
 centered = false
 
 [node name="Fundo2" type="Sprite2D" parent="." unique_id=1476179579]
+texture_filter = 1
 position = Vector2(1152.0001, 0)
 scale = Vector2(3.5999994, 3.6)
 texture = ExtResource("2_1ap6j")
 centered = false
 
 [node name="MeioAzul" type="Sprite2D" parent="." unique_id=2036188920]
+texture_filter = 1
 scale = Vector2(3.6000001, 3.0888891)
 texture = ExtResource("3_8c340")
 centered = false
 
 [node name="MeioAzul2" type="Sprite2D" parent="." unique_id=1138667846]
+texture_filter = 1
 position = Vector2(1152, 0)
 scale = Vector2(3.6, 3.0888891)
 texture = ExtResource("3_8c340")
 centered = false
 
 [node name="MeioPreto" type="Sprite2D" parent="." unique_id=725046158]
+texture_filter = 1
 scale = Vector2(3.5999997, 3.0833333)
 texture = ExtResource("4_45nkh")
 centered = false
 
 [node name="MeioPreto2" type="Sprite2D" parent="." unique_id=1774302234]
+texture_filter = 1
 position = Vector2(1152, 0)
 scale = Vector2(3.5999997, 3.088889)
 texture = ExtResource("4_45nkh")
 centered = false
 
 [node name="Chao" type="Sprite2D" parent="." unique_id=1570038267]
+texture_filter = 1
 position = Vector2(0, 507)
 scale = Vector2(3.6000004, 2.9283834)
 texture = ExtResource("3_qn35j")
 centered = false
 
 [node name="Chao2" type="Sprite2D" parent="." unique_id=1959303164]
+texture_filter = 1
 position = Vector2(1152, 507)
 scale = Vector2(3.6000004, 2.9283834)
 texture = ExtResource("3_qn35j")
