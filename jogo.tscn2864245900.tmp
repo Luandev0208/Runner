@@ -155,5 +155,5 @@ sprite_frames = SubResource("SpriteFrames_qn35j")
 autoplay = "default"
 
 [node name="Gerador_Obstaculos" type="Node2D" parent="." unique_id=224318680]
-position = Vector2(1152, 470)
+position = Vector2(1152, 459)
 script = ExtResource("8_ysdx3")

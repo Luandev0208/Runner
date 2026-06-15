@@ -79,6 +79,7 @@ animations = [{
 
 [node name="Jogo" type="Node2D" unique_id=1961390363]
 script = ExtResource("1_yq54j")
+velocidade = null
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=880474235]
 texture_filter = 1
@@ -155,5 +156,5 @@ sprite_frames = SubResource("SpriteFrames_qn35j")
 autoplay = "default"
 
 [node name="Gerador_Obstaculos" type="Node2D" parent="." unique_id=224318680]
-position = Vector2(1152, 470)
+position = Vector2(1152, 459)
 script = ExtResource("8_ysdx3")
