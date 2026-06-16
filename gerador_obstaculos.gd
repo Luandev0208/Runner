@@ -1,14 +1,20 @@
 extends Node2D
 
-@export var cena_obstaculos = preload("res://prefabs/obstaculo.tscn")
+var timer = 0
 
-var posicoes = [
-	[1152, 459], [1152, 459], [1152, 459], [1152, 459], [1152, 459], [1152, 459], [1152, 459], [1152, 459]
-]
+@export var cena_obstaculo = preload("res://prefabs/obstaculo.tscn")
 
-func _ready() -> void:
-	for posicao in posicoes:
-		var obstaculo = cena_obstaculos.instantiate();
-		add_child(obstaculo);
-		obstaculo.position.x = posicao[0]
-		obstaculo.position.x = posicao[1]
+func _ready():
+	criar_obstaculo()
+
+func _process(delta):
+	timer += delta
+
+	if timer >= 2:
+		timer = 0
+		criar_obstaculo()
+
+func criar_obstaculo():
+	var obstaculo = cena_obstaculo.instantiate()
+	obstaculo.position = Vector2(1152, 480)
+	add_child(obstaculo)

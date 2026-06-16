@@ -41,11 +41,7 @@ func _process(delta: float) -> void:
 		$Chao.position.x = 1152
 	if $Chao2.position.x < -1152:
 		$Chao2.position.x = 1152
-	
-	$Gerador_Obstaculos.position.x -= velocidade*delta*2
-	if $Gerador_Obstaculos.position.x < -1152:
-		$Gerador_Obstaculos.position.x = 1152
-
+		
 	if timer >= 2:
 			$Gerador_Obstaculos.position.x = 1152
 			timer = 0
