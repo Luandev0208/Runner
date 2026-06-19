@@ -10,5 +10,5 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.name == "Jogador":
-		body.vidas -= 1
+		body.pontos += 1
 		queue_free()

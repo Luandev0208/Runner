@@ -11,12 +11,12 @@ script = ExtResource("1_phkyr")
 
 [node name="ImagemObstaculo" type="Sprite2D" parent="." unique_id=1947957010]
 texture_filter = 1
-position = Vector2(1.6940659e-21, 0)
+position = Vector2(1.6940659e-21, -4.999998)
 scale = Vector2(10, 10)
 texture = ExtResource("1_q7004")
 
 [node name="CorpoObstaculo" type="CollisionShape2D" parent="." unique_id=141012362]
-position = Vector2(-5, 59.9375)
+position = Vector2(-5, 54.9375)
 shape = SubResource("RectangleShape2D_phkyr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

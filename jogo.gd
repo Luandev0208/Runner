@@ -1,14 +1,14 @@
 extends Node2D
 
 @export var velocidade: int
-var timer = 0
 
 func _ready() -> void:
 	velocidade = 400
 	
 func _process(delta: float) -> void:
-
-	timer += delta
+	
+	$Status/Vida.text = "Vidas: " + str($Jogador.vidas)
+	$Status/Pontos.text = "Pontos: " + str($Jogador.pontos)
 	
 	$Fundo.position.x -= velocidade*delta*0.05
 	$Fundo2.position.x -= velocidade*delta*0.05
@@ -41,7 +41,3 @@ func _process(delta: float) -> void:
 		$Chao.position.x = 1152
 	if $Chao2.position.x < -1152:
 		$Chao2.position.x = 1152
-		
-	if timer >= 2:
-			$Gerador_Obstaculos.position.x = 1152
-			timer = 0
